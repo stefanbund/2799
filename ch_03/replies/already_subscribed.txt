@@ -1,0 +1,5 @@
+This address was already found in the mailing list membership.  You
+cannot re-subscribe a currently registered address.
+
+For information on managing your list subscription, send an email
+with the subject HELP to <manage_email>. 

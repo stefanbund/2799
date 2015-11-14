@@ -1,0 +1,19 @@
+List messages should be sent to <list_email>.
+
+You can manage your list subscription by sending commands in the
+subject line of your message to <manage_email>. 
+
+Available commands are:
+
+    SUBSCRIBE      Subscribe to the mailing list
+
+    UNSUBSCRIBE    Remove yourself from the mailing list
+
+    SET +DIGEST    Set preferences to receive postings as one
+                   aggregated digest message instead of individual
+                   emails
+
+    SET -DIGEST    Set preferences to receive individual email
+                   postings instead of digest
+
+    HELP           Receive this message

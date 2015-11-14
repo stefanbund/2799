@@ -1,0 +1,14 @@
+You have sent an unknown command.  Available commands are:
+
+    SUBSCRIBE      Subscribe to the mailing list
+
+    UNSUBSCRIBE    Remove yourself from the mailing list
+
+    SET +DIGEST    Set preferences to receive postings as one
+                   aggregated digest message instead of individual
+                   emails
+
+    SET -DIGEST    Set preferences to receive individual email
+                   postings instead of digest
+
+    HELP           Receive this message

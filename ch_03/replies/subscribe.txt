@@ -1,0 +1,6 @@
+You have subscribed.
+
+List messages should be sent to <list_email>.
+
+For information on managing your list subscription, send an email
+with the subject HELP to <manage_email>.

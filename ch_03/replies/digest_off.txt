@@ -1,0 +1,6 @@
+You have set your preferences to receive individual email postings
+instead of a single daily digest message.  You can change this by 
+sending a message with SET +DIGEST in the subject line to
+<manage_email>.
+
+For other available commands, send HELP.
