@@ -13,7 +13,7 @@
     Key Value: <input id="keyValue" type="text" /><br />
     Attribute: <input id="attributeText" type="text" /><br />
     Value: <input id="valueText" type="text" /><br />
-    <button id="p">Put!</button> | <button id="g">Get!</button> | <button id="u">Update!</button>
+    <button id="putThis">Put!</button> | <button id="getThis">Get!</button> | <button id="updateThis">Update!</button> | <button id="deleteThis">Delete!</button>
 
 
     <script type="text/javascript">
@@ -28,7 +28,7 @@
         var roleArn = 'arn:aws:iam::518052915162:role/awsCrudRole'; //from AWS IAM
         var resultData = null;
 
-document.getElementById('p').onclick = function () {
+document.getElementById('putThis').onclick = function () {
     dynamodb = new AWS.DynamoDB({ region: 'us-west-2' });
     docClient = new AWS.DynamoDB.DocumentClient({ service: dynamodb });
     keyText = document.getElementById("keyValue").value;
@@ -57,7 +57,7 @@ document.getElementById('p').onclick = function () {
 
 };
 
-document.getElementById('g').onclick = function () {
+document.getElementById('getThis').onclick = function () {
     dynamodb = new AWS.DynamoDB({ region: 'us-west-2' });
     docClient = new AWS.DynamoDB.DocumentClient({ service: dynamodb });
     keyText = document.getElementById("keyValue").value;
@@ -80,7 +80,7 @@ document.getElementById('g').onclick = function () {
     })
 };
 
-document.getElementById('u').onclick = function () {
+document.getElementById('updateThis').onclick = function () {
     dynamodb = new AWS.DynamoDB({ region: 'us-west-2' });
     docClient = new AWS.DynamoDB.DocumentClient({ service: dynamodb });
     keyText = document.getElementById("keyValue").value;
@@ -107,6 +107,23 @@ document.getElementById('u').onclick = function () {
         if (err) console.log(err);
         else console.log(data);
     })
+};
+
+document.getElementById('deleteThis').onclick = function () {
+    dynamodb = new AWS.DynamoDB({ region: 'us-west-2' });
+    docClient = new AWS.DynamoDB.DocumentClient({ service: dynamodb });
+    keyText = document.getElementById("keyValue").value;
+    console.log("Key Value: ", keyText);
+    params = {
+        TableName: 'awsCrudTest',
+        Key: {
+            itemId: keyText
+        }
+    };
+    docClient.delete(params, function(err, data){
+    if(err) console.log(err);
+    else console.log(data);
+    });
 };
 
 window.fbAsyncInit = function () {
